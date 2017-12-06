@@ -1,0 +1,19 @@
+{{#link-to 'new-factura' type='button' class='btn'}}Crear factura{{/link-to}}
+<table class="table">
+  <thead>
+    <th scope="col">serie</th>
+    <th scope="col">folio</th>
+    <th scope="col">fecha</th>
+    <th scope="col">total</th>
+  </thead>
+  {{#each model as |factura|}}
+  <tbody>
+    <td>{{factura.serie}}</td>
+    <td>{{factura.folio}}</td>
+    <td>{{factura.fecha}}</td>
+    <td>{{factura.total}}</td>
+  </tbody>
+  {{/each}}
+</table>
+
+{{outlet}}
